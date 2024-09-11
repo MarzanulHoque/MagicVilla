@@ -1,8 +1,13 @@
+using MagicVilla_VillaApi.Data;
 using MagicVilla_VillaApi.Logging;
 using MagicVilla_VillaAPI.Logging;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 // Add services to the container.
 
 builder.Services.AddControllers(option => {
