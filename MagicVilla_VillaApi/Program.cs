@@ -1,3 +1,4 @@
+using MagicVilla_VillaApi;
 using MagicVilla_VillaApi.Data;
 using MagicVilla_VillaApi.Logging;
 using MagicVilla_VillaAPI.Logging;
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 });
 // Add services to the container.
 
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddControllers(option => {
     //option.ReturnHttpNotAcceptable = true;
 }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
