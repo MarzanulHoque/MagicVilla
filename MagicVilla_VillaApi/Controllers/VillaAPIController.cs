@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-using MagicVilla_VillaApi.Repository.IRepostiory;
+using MagicVilla_VillaAPI.Repository.IRepostiory;
+
 
 namespace MagicVilla_VillaAPI.Controllers
 {
