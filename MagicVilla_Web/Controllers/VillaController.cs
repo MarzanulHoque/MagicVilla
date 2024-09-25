@@ -41,7 +41,7 @@ namespace MagicVilla_Web.Controllers
 			    var response = await _villaService.CreateAsync<APIResponse>(model);
                     if(response != null && response.IsSuccess)
                     {
-				        return RedirectToAction("Index");
+				        return RedirectToAction("IndexVilla");
                     }
 			}
 			return View(model);
