@@ -24,7 +24,7 @@ namespace MagicVilla_Web.Services
                 ApiType = SD.ApiType.POST,
                 Data = dto,
                 Url = villaUrl + "/api/VillaNumberAPI"
-            });
+			});
         }
 
         public Task<T> DeleteAsync<T>(int id)
@@ -42,7 +42,7 @@ namespace MagicVilla_Web.Services
             {
                 ApiType = SD.ApiType.GET,
                 Url = villaUrl + "/api/VillaNumberAPI"
-            });
+			});
         }
 
         public Task<T> GetAsync<T>(int id)
