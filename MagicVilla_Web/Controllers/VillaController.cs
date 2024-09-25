@@ -66,10 +66,11 @@ namespace MagicVilla_Web.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var response = await _villaService.UpdateAsync<APIResponse>(model);
                 if (response != null && response.IsSuccess)
                 {
-                    return RedirectToAction("IndexVilla");
+                    return RedirectToAction(nameof(IndexVilla));
                 }
             }
             return View(model);
